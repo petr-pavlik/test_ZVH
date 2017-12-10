@@ -152,7 +152,7 @@ PR1$Qa1 <- round(runif(1, 40, 90), 0)
 ```
 
 Výpoèítejte odtokový souèinitel $\varphi$ v povodí o velikosti $A$ = `r PR1$A1` km$^{2}$, kde roèní úhrn srážek je $H_S$ = `r PR1$Hs1` mm
-a prùmìrný roèní prùtok v uzávìrovém profilu povodí je $Q_a$ = `r PR1$Qa1` l$\cdot s$^{-1}$
+a prùmìrný roèní prùtok v uzávìrovém profilu povodí je $Q_a$ = `r PR1$Qa1` l$\cdot$ s$^{-1}$
 \vskip5cm
 
 ## Pøíklad 2 (7 bodù)
@@ -189,12 +189,19 @@ PR3$D4 <- round(runif(1, min = 0.5, max = 4), 2)
 
 Potrubím protéká voda. Dopoèítejte hodnoty ve tøech mìøících profilech $S_1$ = `r PR3$Q1` cm$^{2}$. Uvažujte ideální kapalinu.   
 
-|           Profil          | 1           | 2         | 3          | 4          |   
-|:--------------------------|------------:|----------:|-----------:|-----------:|   
-| v (m$\cdot$ s $^{-1}$)    | `r PR3$v1`  |           | `r PR3$v3` |  1/3 v$_3$ |   
-| Q (l$\cdot$ s $^{-1}$)    | `r PR3$Q1`  | `r PR3$Q2`| `r PR3$Q3` |  Q$_2$/4   |   
-| D (cm)                    |             | `r PR3$D2`| 2D$_2$     | `r PR3$D4` |       
-| S (cm$^{2}$)              |             |           |            |            |    
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Profil                 & 1          & 2          & 3          & 4            \\ \hline
+v (m$\cdot$ s $^{-1}$) & `r PR3$v1` &            & `r PR3$v3` & 1/3 v$_3$    \\ \hline
+Q (l$\cdot$ s $^{-1}$) & `r PR3$Q1` & `r PR3$Q2` & `r PR3$Q3` & Q$_2$/4      \\ \hline
+D (cm)                 &            & `r PR3$D2` & 2D$_2$     & `r PR3$D4`   \\ \hline
+S (cm$^{2}$)           &            &            &            &              \\ \hline
+\end{tabular}
+\end{table}
+
 
 \vskip10cm    
 
@@ -230,19 +237,30 @@ Qmin <- round(runif(1, 5, 10), 0)
 
 Vypoèítejte bilanci vodní nádrže o objemu `r paste(objem,"000", sep = " ")` m$^{3}$ s plochou vodní hladiny `r paste(plocha,"000", sep = " ")` m$^{2}$. Když byla na zaèátku roku `r stav`. Uvažujte roèní výpar `r rocni_vypar` mm.
 
-|  mìsíc                                | XI         | XII         |          I |   
-|---------------------------------------|------------|-------------|------------|   
-| pøítok (l$\cdot$ s$^{-1}$)            | `r XI_Qin` | `r XII_Qin` | `r I_Qin`  |   
-| pøítok (m$^3$)                        |            |             |            |   
-| výpar (l$\cdot$ s$^{-1}$)             |            |             |            |   
-| výpar (m$^3$)                         |            |             |            |   
-| výpar (%)                             | `r XI_ET`  | `r XII_ET`  | `r I_ET`   |   
-| min. zùst. prùtok (l$\cdot$ s$^{-1}$) | `r Qmin `  | `r Qmin `   | `r Qmin `  |
+<!-- |  mìsíc                                | XI         | XII         |          I |    -->
+<!-- |---------------------------------------|------------|-------------|------------|    -->
+<!-- | pøítok (l$\cdot$ s$^{-1}$)            | `r XI_Qin` | `r XII_Qin` | `r I_Qin`  |    -->
+<!-- | pøítok (m$^3$)                        |            |             |            |    -->
+<!-- | výpar (l$\cdot$ s$^{-1}$)             |            |             |            |    -->
+<!-- | výpar (m$^3$)                         |            |             |            |    -->
+<!-- | výpar (%)                             | `r XI_ET`  | `r XII_ET`  | `r I_ET`   |    -->
+<!-- | min. zùst. prùtok (l$\cdot$ s$^{-1}$) | `r Qmin `  | `r Qmin `   | `r Qmin `  | -->
 
 
 
-
-
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline 
+mìsíc                                  &  XI        & XII        & I            \\ \hline
+pøítok (l$\cdot$ s$^{-1}$)             & `r PR3$v1` &            &  `r I_Qin`   \\ \hline
+pøítok (m$^3$)                         & `r PR3$Q1` & `r PR3$Q2` &              \\ \hline
+výpar (l$\cdot$ s$^{-1}$)              &            & `r PR3$D2` &              \\ \hline
+výpar (m$^3$)                          &            &            &              \\ \hline
+výpar (%)                              & `r XI_ET`  & `r XII_ET` &  `r I_ET`    \\ \hline
+min. zùst. prùtok (l$\cdot$ s$^{-1}$)  & `r Qmin`   & `r Qmin`   &  `r Qmin`    \\ \hline
+\end{tabular}
+\end{table}
 
 
 \newpage
