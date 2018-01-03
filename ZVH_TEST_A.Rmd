@@ -1,12 +1,12 @@
 ---
-title: "ZVH Zápoètovı TEST - Varianta `r params$varianta`"
+title: "ZVH ZÃ¡poÄtovÃ½ TEST - Varianta `r params$varianta`"
 # subtitle: "Varianta `r params$varianta`"
-# author: ""
+author: "JmÃ©no a pÅ™Ã­jmenÃ­:"
 header-includes: 
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
 - \fancyhf{}
-- \chead{Jméno a pøíjmení:}
+- \chead{JmÃ©no a pÅ™Ã­jmenÃ­:}
 - \lhead{Varianta `r params$varianta`}
 - \usepackage{float}
 - \usepackage{graphics}
@@ -25,58 +25,58 @@ knitr::opts_chunk$set(echo = TRUE)
 options(OutDec = ",")
 ```
 
-## Slepá mapa (15 bodù)
+## SlepÃ¡ mapa (10 bodÅ¯)
 ```{r, echo = FALSE}
 vsechny_reky <- c("Kamenice",
-          "Smìdá",
-          "Luická Nisa",
-          "Plouènice",
+          "SmÄ›dÃ¡",
+          "LuÅ¾ickÃ¡ Nisa",
+          "PlouÄnice",
           "Kamenice",
           "Labe",
-          "Bílina", 
+          "BÃ­lina", 
           "Chomutovka", 
-          "Ohøe",
+          "OhÅ™e",
           "Liboc",
-          "Úpa", 
+          "Ãšpa", 
           "Metuje", 
           "Jizera", 
           "Mrlina", 
           "Cidlina", 
-          "Bystøice",
+          "BystÅ™ice",
           "Orlice",
-          "Tichá Orlice",
-          "Teplá",
-          "Støela",
-          "Rakovnickı potok",
-          "Lodìnice",
+          "TichÃ¡ Orlice",
+          "TeplÃ¡",
+          "StÅ™ela",
+          "RakovnickÃ½ potok",
+          "LodÄ›nice",
           "Litavka", 
           "Berounka",
           "Vltava",
-          "Me",
+          "MÅ¾e",
           "Rokytka",
-          "Vırovka", 
-          "elivka", 
-          "Radbùza",
-          "Úhlava",
-          "Úslava",
+          "VÃ½rovka", 
+          "Å½elivka", 
+          "RadbÅ¯za",
+          "Ãšhlava",
+          "Ãšslava",
           "Lomnice",
           "Otava", 
-          "Køemelná",
-          "Volyòka",
+          "KÅ™emelnÃ¡",
+          "VolyÅˆka",
           "Blanice",
           "Doubrava",
           "Doubrava",
-          "Louèná",
+          "LouÄnÃ¡",
           "Chrudimka",
-          "Moravská Sázava",
-          "Tøebùvka",
+          "MoravskÃ¡ SÃ¡zava",
+          "TÅ™ebÅ¯vka",
           "Morava",
-          "Sázava",
-          "Malše",
-          "Lunice",
-          "Neárka",
-          "Moravská Dyje",
-          "Rokytná",
+          "SÃ¡zava",
+          "MalÅ¡e",
+          "LuÅ¾nice",
+          "NeÅ¾Ã¡rka",
+          "MoravskÃ¡ Dyje",
+          "RokytnÃ¡",
           "Jihlava",
           "Oslava",
           "Dyje",
@@ -84,69 +84,69 @@ vsechny_reky <- c("Kamenice",
           "Svratka",
           "Svitava",
           "Osoblaha",
-          "Bìlá",
+          "BÄ›lÃ¡",
           "Opava",
           "Moravice",
           "Odra",
-          "Olše",
-          "Haná",
-          "Beèva",
+          "OlÅ¡e",
+          "HanÃ¡",
+          "BeÄva",
           "Ostravice",
-          "Ronovská Beèva",
-          "Vsetínská Beèva",
-          "Olšava",
-          "Vlára", 
+          "RoÅ¾novskÃ¡ BeÄva",
+          "VsetÃ­nskÃ¡ BeÄva",
+          "OlÅ¡ava",
+          "VlÃ¡ra", 
           "Morava")
 vsechny_nadrze <- c("Jirkov", 
-                    "Fláje",
-                    "Josefùv Dùl",
-                    "Labská",
-                    "Rozkoš",
+                    "FlÃ¡je",
+                    "JosefÅ¯v DÅ¯l",
+                    "LabskÃ¡",
+                    "RozkoÅ¡",
                     "Nechranice",
-                    "Máchovo jezero",
-                    "lutice",
+                    "MÃ¡chovo jezero",
+                    "Å½lutice",
                     "Hracholusky",
-                    "Nırsko",
-                    "Vrané",
-                    "Štìchovice",
+                    "NÃ½rsko",
+                    "VranÃ©",
+                    "Å tÄ›chovice",
                     "Slapy",
-                    "Kamık",
-                    "Orlík",
-                    "Koøensko",
-                    "Hnìvkovice",
+                    "KamÃ½k",
+                    "OrlÃ­k",
+                    "KoÅ™ensko",
+                    "HnÄ›vkovice",
                     "Lipno I.",
                     "Lipno II.",
                     "Bezdrev",
-                    "Øímov",
-                    "Svìt",
-                    "Romberk",
-                    "Staòkovskı rybník/rybník Hejtman",
-                    "elivka - Švihov",
+                    "Å˜Ã­mov",
+                    "SvÄ›t",
+                    "RoÅ¾mberk",
+                    "StaÅˆkovskÃ½ rybnÃ­k/rybnÃ­k Hejtman",
+                    "Å½elivka - Å vihov",
                     "Pastviny",
-                    "Slezská Harta",
-                    "Kruberk",
-                    "Šance",
-                    "Seè",
-                    "Vír",
-                    "Brnìnská pøehrada",
+                    "SlezskÃ¡ Harta",
+                    "KruÅ¾berk",
+                    "Å ance",
+                    "SeÄ",
+                    "VÃ­r",
+                    "BrnÄ›nskÃ¡ pÅ™ehrada",
                     "Vranov",
-                    "Nové Mlıny")
+                    "NovÃ© MlÃ½ny")
 vybrane_reky <- sample(vsechny_reky, 10)
 vybrane_nadrze <- sample(vsechny_nadrze, 5)
 ```
 
 
-Zaneste do slepé mapy následující øeky: \par 
+Zaneste do slepÃ© mapy nÃ¡sledujÃ­cÃ­ Å™eky: \par 
 *`r vybrane_reky`.*
 \par 
-Dále v mapì vyznaète tyto nádre: \par 
+DÃ¡le v mapÄ› vyznaÄte tyto nÃ¡drÅ¾e: \par 
 *`r vybrane_nadrze`*
 \begin{figure}[h!]
-  \makebox[\textwidth]{\includegraphics[width = \textwidth, angle = -90]{Slepa_mapa_reky_nadrze.pdf}}
+  \makebox[\textwidth]{\includegraphics[width = \paperwidth]{slepa_mapa_cb.pdf}}
 \end{figure}
 \FloatBarrier
 
-## Pøíklad 1 (7 bodù)
+## PÅ™Ã­klad 1 (7 bodÅ¯)
 ```{r echo = FALSE}
 PR1 <- list()
 PR1$A <- round(runif(1, 4, 14), 0)
@@ -154,11 +154,11 @@ PR1$Hs <- round(runif(1, 400, 900), 0)
 PR1$Qa <- round(runif(1, 40, 90), 0)
 ```
 
-Vıpoèítejte odtokovı souèinitel $\varphi$ v povodí o velikosti $A$ = `r PR1$A` km$^{2}$, kde roèní úhrn sráek je $H_S$ = `r PR1$Hs` mm
-a prùmìrnı roèní prùtok v uzávìrovém profilu povodí je $Q_a$ = `r PR1$Qa` l$\cdot$ s$^{-1}$
+VÃ½poÄÃ­tejte odtokovÃ½ souÄinitel $\varphi$ v povodÃ­ o velikosti $A$ = `r PR1$A` km$^{2}$, kde roÄnÃ­ Ãºhrn srÃ¡Å¾ek je $H_S$ = `r PR1$Hs` mm
+a prÅ¯mÄ›rnÃ½ roÄnÃ­ prÅ¯tok v uzÃ¡vÄ›rovÃ©m profilu povodÃ­ je $Q_a$ = `r PR1$Qa` l$\cdot$ s$^{-1}$
 \vskip5cm
 
-## Pøíklad 2 (7 bodù)
+## PÅ™Ã­klad 2 (7 bodÅ¯)
 ```{r, echo = FALSE}
 PR2 <- list()
 PR2$A <- round(runif(1, 4, 25), 0)
@@ -166,32 +166,32 @@ PR2$Hs <- round(runif(1, 400, 1400), 0)
 PR2$phi <- round(runif(1, 0, 1), 2)
 ```
 
-<!-- `r if(params$varianta == "A"){"##Pøíklad 2 \nVypoèítejte mìsíèní bilanci \n\n$ $\n"}` -->
-Vypoètìte odtok (l$\cdot$s$^{-1}$) z území o rozloze $A$ = `r PR2$A` km$^2$, kterému náleí roèní úhrn sráek $Hs$ = `r PR2$Hs` mm a odtokovı souèintel $\varphi$ = `r PR2$phi`.
+<!-- `r if(params$varianta == "A"){"##PÅ™Ã­klad 2 \nVypoÄÃ­tejte mÄ›sÃ­ÄnÃ­ bilanci \n\n$ $\n"}` -->
+VypoÄtÄ›te odtok (l$\cdot$s$^{-1}$) z ÃºzemÃ­ o rozloze $A$ = `r PR2$A` km$^2$, kterÃ©mu nÃ¡leÅ¾Ã­ roÄnÃ­ Ãºhrn srÃ¡Å¾ek $Hs$ = `r PR2$Hs` mm a odtokovÃ½ souÄintel $\varphi$ = `r PR2$phi`.
 \vskip5cm
 
-## Pøíklad 3 (7 bodù)
+## PÅ™Ã­klad 3 (10 bodÅ¯)
 ```{r, echo = FALSE}
-# Generování zadání rovnice kontinuity
+# GenerovÃ¡nÃ­ zadÃ¡nÃ­ rovnice kontinuity
 PR3 <- list()
-PR3$Q1 <- round(runif(1, min = 0.1, max = 10), 2) # prùmìr v cm2
+PR3$Q1 <- round(runif(1, min = 0.1, max = 10), 2) # prÅ¯mÄ›r v cm2
 PR3$v1 <- round(runif(1, min = 0.5, max = 4), 2)
 PR3$D1 <- round(runif(1, min = 0.5, max = 4), 2)
 
-PR3$Q2 <- round(runif(1, min = 0.1, max = 10), 2) # prùmìr v cm2
+PR3$Q2 <- round(runif(1, min = 0.1, max = 10), 2) # prÅ¯mÄ›r v cm2
 PR3$v2 <- round(runif(1, min = 0.5, max = 4), 2)
 PR3$D2 <- round(runif(1, min = 0.5, max = 4), 2)
 
-PR3$Q3 <- round(runif(1, min = 0.1, max = 10), 2) # prùmìr v cm2
+PR3$Q3 <- round(runif(1, min = 0.1, max = 10), 2) # prÅ¯mÄ›r v cm2
 PR3$v3 <- round(runif(1, min = 0.5, max = 4), 2)
 PR3$D3 <- round(runif(1, min = 0.5, max = 4), 2)
 
-PR3$Q4 <- round(runif(1, min = 0.1, max = 10), 2) # prùmìr v cm2
+PR3$Q4 <- round(runif(1, min = 0.1, max = 10), 2) # prÅ¯mÄ›r v cm2
 PR3$v4 <- round(runif(1, min = 0.5, max = 4), 2)
 PR3$D4 <- round(runif(1, min = 0.5, max = 4), 2)
 ```
 
-Potrubím protéká voda. Dopoèítejte hodnoty ve ètyøech mìøících profilech $S_1$ = `r PR3$Q1` cm$^{2}$. Uvaujte ideální kapalinu a kruhovı pøùøez potrubí. Uijte znalosti, e Q$_1$ = Q$_2$.  
+PotrubÃ­m protÃ©kÃ¡ voda. DopoÄÃ­tejte hodnoty ve ÄtyÅ™ech mÄ›Å™Ã­cÃ­ch profilech. UvaÅ¾ujte ideÃ¡lnÃ­ kapalinu a kruhovÃ½ pÅ™Å¯Å™ez potrubÃ­. UÅ¾ijte znalosti, Å¾e Q$_1$ = Q$_2$.  
 
 
 \begin{table}[h!]
@@ -199,17 +199,17 @@ Potrubím protéká voda. Dopoèítejte hodnoty ve ètyøech mìøících profilech $S_1$ =
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 Profil                 & 1          & 2          & 3          & 4            \\ \hline
-v (m$\cdot$ s $^{-1}$) & `r PR3$v1` &            & `r PR3$v3` & 1/3 v$_3$    \\ \hline
+v (m$\cdot$ s $^{-1}$) & `r PR3$v1` &            & `r PR3$v3` &              \\ \hline
 Q (l$\cdot$ s $^{-1}$) &            &            & 2Q$_{2}$   & Q$_2$/4      \\ \hline
-D (cm)                 & `r PR3$D1` & `r PR3$D2` & 2D$_2$     & `r PR3$D4`   \\ \hline
-S (cm$^{2}$)           &            &            &            &              \\ \hline
+D (cm)                 & `r PR3$D1` & `r PR3$D2` &            &              \\ \hline
+S (cm$^{2}$)           &            &            &            & 1/3 S$_3$    \\ \hline
 \end{tabular}
 \end{table}
 
 
 \vskip10cm    
 
-## Pøíklad 4 (7 bodù)
+## PÅ™Ã­klad 4 (6 bodÅ¯)
 ```{r, echo = FALSE}
 PR4 <- list()
 PR4$Q1 <- round(runif(1, 40, 90), 0)
@@ -218,15 +218,16 @@ PR4$Q2 <- round(runif(1, 1, 9), 0)
 PR4$c2 <- round(runif(1, 0.010, 0.050), 3)
 ```
 
-V pozorovaném místì byl v øece namìøen prùtok $Q_1$ = `r PR4$Q1` l$\cdot$ s$^{-1}$ a zjištìna koncentrace kontaminaèní látky $c_1=$ `r PR4$c1`  mg$\cdot$ l$^{-1}$. Dále po toku do nìj vstupuje vıpust $Q_2$ = `r PR4$Q2` l$\cdot$ s$^{-1}$ s koncentrací $Q_2=$ `r PR4$c2` mg$\cdot$ l$^{-1}$. Vypoèítejte celkovou koncetraci látky za soutokem.
+V pozorovanÃ©m mÃ­stÄ› byl v Å™ece namÄ›Å™en prÅ¯tok $Q_1$ = `r PR4$Q1` l$\cdot$ s$^{-1}$ a zjiÅ¡tÄ›na koncentrace kontaminaÄnÃ­ lÃ¡tky $c_1=$ `r PR4$c1`  mg$\cdot$ l$^{-1}$. DÃ¡le po toku do nÄ›j vstupuje vÃ½pust $Q_2$ = `r PR4$Q2` l$\cdot$ s$^{-1}$ s koncentracÃ­ $c_2=$ `r PR4$c2` mg$\cdot$ l$^{-1}$. VypoÄÃ­tejte celkovou koncetraci lÃ¡tky za soutokem.
 \vskip5cm
 
-## Pøíklad 5 (7 bodù)
+## PÅ™Ã­klad 5 (10 bodÅ¯)
 ```{r, echo = FALSE}
-# objem nádre
+# objem nÃ¡drÅ¾e
 PR5 <- list()
-PR5$V <- round(runif(1, 100, 300), 0)
-PR5$stav <- sample(c("prázdná", "plná"), 1)
+PR5$V <- round(runif(1, 100, 300), 0) * 1000
+PR5$V_text <- PR5$V / 1000
+PR5$stav <- sample(c("prÃ¡zdnÃ¡", "plnÃ¡"), 1)
 PR5$A <- round(runif(1, 10, 30), 0)
 PR5$ET <- round(runif(1, 100, 900), 0)
 PR5$XI_Qin <- round(runif(1, 20, 60), 0)
@@ -240,65 +241,126 @@ PR5$I_ET <- round(runif(1, 1, 2), 1)
 PR5$Qmin <- round(runif(1, 5, 10), 0)
 ```
 
-Vypoèítejte bilanci vodní nádre o objemu `r paste(PR5$V,"000", sep = " ")` m$^{3}$ s plochou vodní hladiny `r paste(PR5$A,"000", sep = " ")` m$^{2}$. Kdy byla na zaèátku roku `r PR5$stav`. Uvaujte roèní vıpar `r PR5$ET` mm.
+VypoÄÃ­tejte bilanci vodnÃ­ nÃ¡drÅ¾e o objemu `r paste(PR5$V_text,"000", sep = " ")` m$^{3}$ s plochou vodnÃ­ hladiny `r paste(PR5$A,"000", sep = " ")` m$^{2}$. KdyÅ¾ byla na zaÄÃ¡tku hydrologickÃ©ho roku `r PR5$stav`. UvaÅ¾ujte roÄnÃ­ vÃ½par `r PR5$ET` mm.
 
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l|c|c|c|c|}
 \hline 
-mìsíc                                  &  XI          & XII          & I            \\ \hline
-pøítok (l$\cdot$ s$^{-1}$)             &`r PR5$XI_Qin`&`r PR5$XI_Qin`&`r PR5$I_Qin` \\ \hline
-pøítok (m$^3$)                         &              &              &              \\ \hline
-vıpar (l$\cdot$ s$^{-1}$)              &              &              &              \\ \hline
-vıpar (m$^3$)                          &              &              &              \\ \hline
-vıpar (\%)                             &`r PR5$XI_ET` &`r PR5$XII_ET`&`r PR5$I_ET`  \\ \hline
-min. zùst. prùtok (l$\cdot$ s$^{-1}$)  &`r PR5$Qmin`  &`r PR5$Qmin`  &`r PR5$Qmin`  \\ \hline
-min. zùst. prùtok (m$^3$)              &              &              &              \\ \hline
+mÄ›sÃ­c                                  &  XI          & XII          & I            \\ \hline
+pÅ™Ã­tok (l$\cdot$ s$^{-1}$)             &`r PR5$XI_Qin`&`r PR5$XII_Qin`&`r PR5$I_Qin` \\ \hline
+pÅ™Ã­tok (m$^3$)                         &              &              &              \\ \hline
+vÃ½par (l$\cdot$ s$^{-1}$)              &              &              &              \\ \hline
+vÃ½par (m$^3$)                          &              &              &              \\ \hline
+vÃ½par (\%)                             &`r PR5$XI_ET` &`r PR5$XII_ET`&`r PR5$I_ET`  \\ \hline
+min. zÅ¯st. prÅ¯tok (l$\cdot$ s$^{-1}$)  &`r PR5$Qmin`  &`r PR5$Qmin`  &`r PR5$Qmin`  \\ \hline
+min. zÅ¯st. prÅ¯tok (m$^3$)              &              &              &              \\ \hline
 bilance                                &              &              &              \\ \hline
-zásoba                                 &              &              &              \\ \hline
+zÃ¡soba                                 &              &              &              \\ \hline
 \end{tabular}
 \end{table}
 
 
 \newpage
-## Vısledky
-#### Pøíklad 1
+## VÃ½sledky
+#### PÅ™Ã­klad 1
 ```{r, echo = FALSE}
 PR1_res <- list()
 PR1_res$phi <- (PR1$Qa * 1e-03 * 60 * 60 * 24 * 365) / (PR1$A * 1e+06 * PR1$Hs * 1e-03) 
 ```
-Odtokovı souèinitel je $\varphi$ = `r round(PR1_res$phi, 2)`.
+OdtokovÃ½ souÄinitel je $\varphi$ = `r round(PR1_res$phi, 2)`.
 
 
-#### Pøíklad 2   
+#### PÅ™Ã­klad 2   
 ```{r, echo = FALSE}
 PR2_res <- list()
-PR2_res$Qout <- (PR2$Hs * 1e-03 * 60 * 60 * 24 * 365) / (PR1$A * 1e+06 * PR1$Hs * 1e-03) 
+PR2_res$Qout <- (PR2$Hs / 1000 * PR2$A * 1000000 * PR2$phi) / (60 * 60 * 24 * 365) * 1000 
 ```
-Odtok z povodí je 
+Odtok z povodÃ­ je $Q$ = `r round(PR2_res$Qout, 2)` l$\cdot$s$^{-1}$
 
-#### Pøíklad 3   
-#### Pøíklad 4  
+#### PÅ™Ã­klad 3
+```{r, echo = FALSE}
+PR3_res <- list()
+PR3_res$S1 <- (pi * PR3$D1^2)/4
+PR3_res$Q1 <- PR3$v1 * PR3_res$S1 / 10000 * 1000
+PR3_res$Q2 <- PR3_res$Q1
+PR3_res$S2 <- (pi * PR3$D2^2)/4
+PR3_res$v2 <- ((PR3_res$Q2 / 1000) / (PR3_res$S2 / 10000))
+PR3_res$S3 <- ((PR3_res$Q2 / 1000 * 2) / PR3$v3 * 10000)
+PR3_res$D3 <- sqrt((4 * PR3_res$S3) / pi)
+PR3_res$Q4 <- PR3_res$Q2 / 4
+PR3_res$S4 <- PR3_res$S3 / 3
+PR3_res$v4 <- ((PR3_res$Q4 / 1000) / (PR3_res$S4 / 10000))
+PR3_res$D4 <- sqrt((4 * PR3_res$S4) / pi)
+
+PR3_res$S1_ <- round(PR3_res$S1, 2)
+PR3_res$Q1_ <- round(PR3_res$Q1, 2)
+PR3_res$Q2_ <- round(PR3_res$Q2, 2)
+PR3_res$S2_ <- round(PR3_res$S2, 2)
+PR3_res$v2_ <- round(PR3_res$v2, 2)
+PR3_res$S3_ <- round(PR3_res$S3, 2)
+PR3_res$D3_ <- round(PR3_res$D3, 2)
+PR3_res$Q4_ <- round(PR3_res$Q4, 2)
+PR3_res$S4_ <- round(PR3_res$S4, 2)
+PR3_res$v4_ <- round(PR3_res$v4, 2)
+PR3_res$D4_ <- round(PR3_res$D4, 2)
+```
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Profil                 & 1              & 2               & 3               & 4               \\ \hline
+v (m$\cdot$ s $^{-1}$) & `r PR3$v1`     & \textbf{`r PR3_res$v2_`}  & `r PR3$v3`      & \textbf{`r PR3_res$v4_`}  \\ \hline
+Q (l$\cdot$ s $^{-1}$) & \textbf{`r PR3_res$Q1_`} & \textbf{`r PR3_res$Q2_`}  & 2Q$_{2}$        & Q$_2$/4         \\ \hline
+D (cm)                 & `r PR3$D1`     & `r PR3$D2`      & \textbf{`r PR3_res$D3_`}  & \textbf{`r PR3_res$D4_`}  \\ \hline
+S (cm$^{2}$)           & \textbf{`r PR3_res$S1_`} & \textbf{`r PR3_res$S2_`}  & \textbf{`r PR3_res$S3_`}  & 1/3 S$_3$       \\ \hline
+\end{tabular}
+\end{table}
+
+
+#### PÅ™Ã­klad 4  
 ```{r, echo = FALSE}
 PR4_res <- list()
-PR4_res$cv <- (PR4$Q1 * PR4$c1 + PR4$Q2 + PR4$c2) / (PR4$Q1 + PR4$Q2)
+PR4_res$cv <- ((PR4$Q1 * PR4$c1) + (PR4$Q2 * PR4$c2)) / (PR4$Q1 + PR4$Q2)
 ```
-Koncentrace po soutoku je rovna $c$ = `r round(PR4_res$cv, 3)` mg$\cdot$ l$^{-1}$. 
+Koncentrace po soutoku je rovna $c$ = `r round(PR4_res$cv, 5)` mg$\cdot$ l$^{-1}$. 
 
-#### Pøíklad 5   
+#### PÅ™Ã­klad 5   
 ```{r, echo = FALSE}
 PR5_res <- list()
-PR5_res$XI_Qminm3 <- round(PR5$Qmin * 10^(-3) * 60 * 60 * 24 * 30 / 10^(3), 2)
-PR5_res$XI_Qinm3 <- round(PR5$Qin * 10^(-3) * 60 * 60 * 24 * 30, 2)
+PR5_res$XI_Qminm3 <- round(PR5$Qmin * 10^(-3) * 60 * 60 * 24 * 30, 0)
+PR5_res$XII_Qminm3 <- round(PR5$Qmin * 10^(-3) * 60 * 60 * 24 * 31, 0)
+PR5_res$I_Qminm3 <- round(PR5$Qmin * 10^(-3) * 60 * 60 * 24 * 31, 0)
 
-PR5_res$XI_ETm3 <- round(PR5$XI_ET * 10^(-2) * (PR5$ET) * 10^(-3) * PR5$A * 10^(3), 2) 
-PR5_res$XII_ETm3 <- round(PR5$XII_ET * 10^(-2) * (PR5$ET) * 10^(-3) * PR5$A * 10^(3), 2)
-PR5_res$I_ETm3 <- round(PR5$I_ET * 10^(-2) * (PR5$ET) * 10^(-3) * PR5$A * 10^(3), 2)
+PR5_res$XI_Qinm3 <- round(PR5$XI_Qin * 10^(-3) * 60 * 60 * 24 * 30, 0)
+PR5_res$XII_Qinm3 <- round(PR5$XII_Qin * 10^(-3) * 60 * 60 * 24 * 31, 0)
+PR5_res$I_Qinm3 <- round(PR5$I_Qin * 10^(-3) * 60 * 60 * 24 * 31, 0)
+  
+PR5_res$XI_ETm3 <- round(PR5$XI_ET * 10^(-2) * (PR5$ET) * 10^(-3) * PR5$A * 10^(3), 3) 
+PR5_res$XII_ETm3 <- round(PR5$XII_ET * 10^(-2) * (PR5$ET) * 10^(-3) * PR5$A * 10^(3), 3)
+PR5_res$I_ETm3 <- round(PR5$I_ET * 10^(-2) * (PR5$ET) * 10^(-3) * PR5$A * 10^(3), 3)
 
 PR5_res$XI_ETl <- round(PR5_res$XI_ETm3 * 10^(3) / 60 / 60 / 24 / 30, 2)
 PR5_res$XII_ETl <- round(PR5_res$XII_ETm3 * 10^(3) / 60 / 60 / 24 / 30, 2)
-PR5_res$I_ETl <- round(PR5_res$I_ETm3 * 10^(3) / 60 / 60 / 24 / 30, 2)   
+PR5_res$I_ETl <- round(PR5_res$I_ETm3 * 10^(3) / 60 / 60 / 24 / 30, 2) 
+
+PR5_res$XI_bil <- round(PR5_res$XI_Qinm3 - PR5_res$XI_Qminm3 - PR5_res$XI_ETm3, 0)
+PR5_res$XII_bil <- round(PR5_res$XII_Qinm3 - PR5_res$XII_Qminm3 - PR5_res$XII_ETm3, 0) 
+PR5_res$I_bil <- round(PR5_res$I_Qinm3 - PR5_res$I_Qminm3 - PR5_res$I_ETm3, 0)
+
+if (PR5$stav == "plnÃ¡") {
+  PR5_res$XI_zas <- round(PR5$V + PR5_res$XI_bil, 0)
+  PR5_res$XII_zas <- round(PR5_res$XI_zas + PR5_res$XII_bil, 0)
+  PR5_res$I_zas <- round(PR5_res$XII_zas + PR5_res$I_bil, 0)
+} else {
+  PR5_res$XI_zas <- round(PR5_res$XI_bil, 0)
+  PR5_res$XII_zas <- round(PR5_res$XI_zas + PR5_res$XII_bil, 0)
+  PR5_res$I_zas <- round(PR5_res$XII_zas + PR5_res$I_bil, 0)
+}
+
 ```
 
 
@@ -306,16 +368,16 @@ PR5_res$I_ETl <- round(PR5_res$I_ETm3 * 10^(3) / 60 / 60 / 24 / 30, 2)
 \centering
 \begin{tabular}{|l|c|c|c|c|}
 \hline 
-mìsíc                                  &  XI & XII                 & I                    \\ \hline
-pøítok (l$\cdot$ s$^{-1}$)             &`r PR5$XI_Qin`       &`r PR5$XII_Qin`      &`r PR5$I_Qin`        \\ \hline
-pøítok (m$^3$)                         &`r PR5_res$XI_Qinm3` &`r PR5_res$XII_Qinm3`&`r PR5_res$I_Qinm3`  \\ \hline
-vıpar (l$\cdot$ s$^{-1}$)              &`r PR5_res$XI_ETl`   &`r PR5_res$XII_ETl`  &`r PR5_res$I_ETl`    \\ \hline
-vıpar (m$^3$)                          &`r PR5_res$XI_ETm3`  &`r PR5_res$XII_ETm3` &`r PR5_res$I_ETm3`   \\ \hline
-vıpar (\%)                              &`r PR5$XI_ET`        & `r PR5$XII_ET`      &`r PR5$I_ET`            \\ \hline
-min. zùst. prùtok (l$\cdot$ s$^{-1}$)  &`r PR5$Qmin`         & `r PR5$Qmin`        &`r PR5$Qmin`            \\ \hline
-min. zùst. prùtok (m$^3$)              &`r paste0(PR5_res$XI_Qminm3,000)`&`r paste0(PR5_res$XI_Qminm3,000)`&`r paste0(PR5_res$XI_Qminm3,000)`\\ \hline
-bilance                                &            &            &              \\ \hline
+mÄ›sÃ­c                                   &  XI                 & XII                 & I                    \\ \hline
+pÅ™Ã­tok (l$\cdot$ s$^{-1}$)              & \textbf{`r PR5$XI_Qin`}  & \textbf{`r PR5$XII_Qin`}      & \textbf{`r PR5$I_Qin`}        \\ \hline
+pÅ™Ã­tok (m$^3$)                          &`r as.character(PR5_res$XI_Qinm3)` &`r as.character(PR5_res$XII_Qinm3)`&`r as.character(PR5_res$I_Qinm3)`  \\ \hline
+vÃ½par (l$\cdot$ s$^{-1}$)               &`r PR5_res$XI_ETl`   &`r PR5_res$XII_ETl`  &`r PR5_res$I_ETl`    \\ \hline
+vÃ½par (m$^3$)                           &`r PR5_res$XI_ETm3`  &`r PR5_res$XII_ETm3` &`r PR5_res$I_ETm3`   \\ \hline
+vÃ½par (\%)                              & \textbf{`r PR5$XI_ET`}  & \textbf{`r PR5$XII_ET`} & \textbf{`r PR5$I_ET`}            \\ \hline
+min. zÅ¯st. prÅ¯tok (l$\cdot$ s$^{-1}$)   & \textbf{`r PR5$Qmin`}   & \textbf{`r PR5$Qmin`}   & \textbf{`r PR5$Qmin`}            \\ \hline
+min. zÅ¯st. prÅ¯tok (m$^3$)               &`r as.character(PR5_res$XI_Qminm3)`&`r as.character(PR5_res$XII_Qminm3)`&`r as.character(PR5_res$I_Qminm3)`\\ \hline
+bilance                                 & `r as.character(PR5_res$XI_bil)`  & `r as.character(PR5_res$XII_bil)` & `r as.character(PR5_res$I_bil)`    \\ \hline
 
-zásoba                                 &            &            &              \\ \hline
+zÃ¡soba                                  & `r as.character(PR5_res$XI_zas)`  & `r as.character(PR5_res$XII_zas)` & `r as.character(PR5_res$I_zas)`     \\ \hline
 \end{tabular}
 \end{table}
